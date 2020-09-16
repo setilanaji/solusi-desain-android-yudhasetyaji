@@ -1,11 +1,15 @@
 package sorting
 
 fun main() {
+    print("banyak nya angka: ")
     val num = readLine()!!.toInt()
     val arr = Array<Int>(num){0}
     repeat(num){
+        print("ke-${it+1} : ")
         arr[it] = readLine()!!.toInt()
     }
+    println("angka yang telah dimasukan: ${arr.asList().toString()}")
+    println("proses:")
     val count = sorting(arr)
     println("Jumlah swap: $count")
 }
